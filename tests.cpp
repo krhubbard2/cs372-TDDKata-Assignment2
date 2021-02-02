@@ -44,3 +44,8 @@ TEST_CASE( "A single char delimiter can be defined on the first line" ) {
     REQUIRE( stringCalculate("//#\n5#3") == 8);
     REQUIRE( stringCalculate("//@\n18@22") == 40);
 }
+
+TEST_CASE( "A multi char delimiter can be defined on the first line" ) {
+    REQUIRE( stringCalculate("//[###]\n5###19") == 24);
+    REQUIRE( stringCalculate("//[*@*]\n13*@*93") == 106);
+}

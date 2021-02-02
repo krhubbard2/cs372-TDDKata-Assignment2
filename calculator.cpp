@@ -19,19 +19,16 @@ int stringCalculate(const string & str)
       int n;
       iss >> n; 
       
-      if (iss.eof() || iss.bad()){
-        break;
-      }
-      else if (iss.fail()){
+      if (!iss)
+      {
+        if (iss.eof())
+          break;
         iss.clear();
         iss.ignore(1);
       }
-      else {
-        result +=n;
-      }
+
+      result +=n;
     }
-    
-  
     
     return result;
 }

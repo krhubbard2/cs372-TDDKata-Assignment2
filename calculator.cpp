@@ -5,6 +5,8 @@
 using std::istringstream;
 using std::string;
 
+// Allows use of any delimiter. Ignores all types except ints in string and adds them together.
+// Will not add inputs greater than 1000.
 int stringCalculate(const string & str)
 {
     int result = 0;

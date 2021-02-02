@@ -39,3 +39,8 @@ TEST_CASE( "Numbers greater than 1000 are ignored" ) {
     REQUIRE( stringCalculate("4\n1000") == 4);
     REQUIRE( stringCalculate("4\n1000\n3") == 7);
 }
+
+TEST_CASE( "A single char delimiter can be defined on the first line" ) {
+    REQUIRE( stringCalculate("//#\n5#3") == 8);
+    REQUIRE( stringCalculate("//@\n18@22") == 40);
+}

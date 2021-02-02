@@ -18,7 +18,7 @@ int stringCalculate(const string & str)
     {
       int n;
       iss >> n; 
-      
+
       if (!iss)
       {
         if (iss.eof())

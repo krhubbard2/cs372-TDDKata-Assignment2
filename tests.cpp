@@ -27,3 +27,8 @@ TEST_CASE( "Three numbers, delimited either way, returns the sum" ) {
     REQUIRE( stringCalculate("4, 7, 9") == 20);
     REQUIRE( stringCalculate("23\n5\n11") == 39);
 }
+
+TEST_CASE( "Negative numbers throw an exception" ) {
+    REQUIRE_THROWS_AS( stringCalculate("-1"), IllegalArgumentException);
+    REQUIRE_THROWS_AS( stringCalculate("-12"), IllegalArgumentException);
+}

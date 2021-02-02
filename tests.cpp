@@ -10,3 +10,8 @@ TEST_CASE( "A single number returns the value" ) {
     REQUIRE( stringCalculate("6") == 6 );
     REQUIRE( stringCalculate("53") == 53);
 }
+
+TEST_CASE( "Two numbers, comma delimited, returns the sum" ) {
+    REQUIRE( stringCalculate("1, 8") == 9);
+    REQUIRE( stringCalculate("13, 20") == 33);
+}

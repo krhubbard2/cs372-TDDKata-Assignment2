@@ -29,6 +29,6 @@ TEST_CASE( "Three numbers, delimited either way, returns the sum" ) {
 }
 
 TEST_CASE( "Negative numbers throw an exception" ) {
-    REQUIRE_THROWS_AS( stringCalculate("-1"), IllegalArgumentException);
-    REQUIRE_THROWS_AS( stringCalculate("-12"), IllegalArgumentException);
+    REQUIRE_THROWS_WITH( stringCalculate("-1"), "No negative numbers!" );
+    REQUIRE_THROWS_WITH( stringCalculate("-12"), "No negative numbers!" );
 }

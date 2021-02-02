@@ -19,6 +19,12 @@ int stringCalculate(const string & str)
       int n;
       iss >> n; 
 
+       if (n < 0)
+      {
+        throw "No negative numbers!";
+      }
+     
+
       if (!iss)
       {
         if (iss.eof())

@@ -33,7 +33,11 @@ int stringCalculate(const string & str)
         iss.ignore(1);
       }
 
-      result +=n;
+      if (n < 1000)
+      {
+        result +=n;
+      }
+      
     }
     
     return result;

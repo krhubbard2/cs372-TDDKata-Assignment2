@@ -32,3 +32,10 @@ TEST_CASE( "Negative numbers throw an exception" ) {
     REQUIRE_THROWS_WITH( stringCalculate("-1"), "No negative numbers!" );
     REQUIRE_THROWS_WITH( stringCalculate("-12"), "No negative numbers!" );
 }
+
+TEST_CASE( "Numbers greater than 1000 are ignored" ) {
+    REQUIRE( stringCalculate("4, 1000") == 4);
+    REQUIRE( stringCalculate("4, 1000, 6") == 10);
+    REQUIRE( stringCalculate("4\n1000") == 4);
+    REQUIRE( stringCalculate("4\n1000\n3") == 7);
+}

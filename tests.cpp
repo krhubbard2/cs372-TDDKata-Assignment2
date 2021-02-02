@@ -15,3 +15,8 @@ TEST_CASE( "Two numbers, comma delimited, returns the sum" ) {
     REQUIRE( stringCalculate("1, 8") == 9);
     REQUIRE( stringCalculate("13, 20") == 33);
 }
+
+TEST_CASE( "Two numbers, newline delimited, returns the sum" ) {
+    REQUIRE( stringCalculate("4\n12") == 16);
+    REQUIRE( stringCalculate("13\n5") == 18);
+}

@@ -20,3 +20,10 @@ TEST_CASE( "Two numbers, newline delimited, returns the sum" ) {
     REQUIRE( stringCalculate("4\n12") == 16);
     REQUIRE( stringCalculate("13\n5") == 18);
 }
+
+TEST_CASE( "Three numbers, delimited either way, returns the sum" ) {
+    REQUIRE( stringCalculate("4, 7\n9") == 20);
+    REQUIRE( stringCalculate("23\n5, 11") == 39);
+    REQUIRE( stringCalculate("4, 7, 9") == 20);
+    REQUIRE( stringCalculate("23\n5\n11") == 39);
+}
